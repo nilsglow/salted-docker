@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get -y install salt-minion
 
 # SaltStack fail hard if any state fails
-ADD salt/minion /etc/salt/minion
+ADD minion /etc/salt/minion
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
