@@ -17,3 +17,5 @@ ADD minion /etc/salt/minion
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 VOLUME /srv/salt
+
+CMD [ "/sbin/init" ]
