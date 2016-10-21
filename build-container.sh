@@ -3,7 +3,7 @@
 NAME=localhost:5000/nilsglow/salted-docker
 TAG=latest
 
-docker build -t $NAME:$TAG .
+docker build -t $NAME:$TAG $(dirname $0)
 docker push $NAME:$TAG
 container_id=$(docker create -v $1:/srv/salt $NAME:$TAG)
 docker start $container_id
